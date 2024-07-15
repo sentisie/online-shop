@@ -3,6 +3,10 @@ import { FC } from "react";
 import classes from "./Footer.module.scss";
 import { Link } from "react-router-dom";
 
+import insta from "../../images/icons/insta.png";
+import facebook from "../../images/icons/facebook.png";
+import youtube from "../../images/icons/youtube.png";
+
 const Footer: FC = () => {
 	return (
 		<footer className={classes.footer}>
@@ -61,13 +65,13 @@ const Footer: FC = () => {
 				</article>
 				<article className={classes.socials}>
 					<a href="#">
-						<img src="/src/images/icons/insta.png" alt="" />
+						<img src={insta} alt="" />
 					</a>
 					<a href="#">
-						<img src="/src/images/icons/facebook.png" alt="" />
+						<img src={facebook} alt="" />
 					</a>
 					<a href="#">
-						<img src="/src/images/icons/youtube.png" alt="" />
+						<img src={youtube} alt="" />
 					</a>
 				</article>
 			</div>

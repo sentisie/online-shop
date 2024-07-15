@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import classes from "./Header.module.scss";
 import { useAppDispatch, useAppSelector } from "../../hooks/redux";
 import { toggleForm } from "../../store/reducers/user/userSlice";
-import { AVATAR } from "../../utils/constants";
+import AVATAR from "/src/images/users/guest.jpg";
 import UserLoader from "../../UI/loaders/user-loader/UserLoader";
 import { useGetProductsQuery } from "../../services/ProductServices";
 import Loader from "../../UI/loaders/main-loader/Loader";
@@ -147,24 +147,22 @@ const Header: FC = () => {
 								) : !data?.length ? (
 									"No results"
 								) : (
-									data
-										?.slice(0, 5)
-										.map(({ title, images, id }: IProduct) => {
-											return (
-												<Link
-													onClick={() => setSearchValue("")}
-													key={id}
-													className={classes.item}
-													to={`/products/${id}`}
-												>
-													<div
-														className={classes.image}
-														style={{ backgroundImage: `url(${images[0]})` }}
-													/>
-													<div className={classes.title}>{title}</div>
-												</Link>
-											);
-										})
+									data?.slice(0, 5).map(({ title, images, id }: IProduct) => {
+										return (
+											<Link
+												onClick={() => setSearchValue("")}
+												key={id}
+												className={classes.item}
+												to={`/products/${id}`}
+											>
+												<div
+													className={classes.image}
+													style={{ backgroundImage: `url(${images[0]})` }}
+												/>
+												<div className={classes.title}>{title}</div>
+											</Link>
+										);
+									})
 								)}
 							</article>
 						)}
