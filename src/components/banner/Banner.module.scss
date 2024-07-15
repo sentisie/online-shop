@@ -1,0 +1,65 @@
+.banner {
+	display: flex;
+	min-height: 34.375rem;
+	text-align: center;
+	.left {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 1.875rem;
+		position: relative;
+		&::after,
+		&::before {
+			content: "";
+			position: absolute;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: contain;
+		}
+		&::before {
+			width: 17.875rem;
+			height: 19.375rem;
+			bottom: -5%;
+			left: -15%;
+			background-image: url("../../images//banner/sneaker.png");
+		}
+		&::after {
+			width: 16.25rem;
+			height: 17.5rem;
+			bottom: -18%;
+			right: -5%;
+			background-image: url("../../images//banner/console.png");
+		}
+		.content {
+			font-size: 4.75rem;
+			line-height: 180%;
+			margin-bottom: 1.5625rem;
+			color: var(--main-accent-color);
+			span {
+				font-size: 10.625rem;
+				font-weight: 500;
+			}
+		}
+	}
+	.right {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+		padding: 0.9375rem;
+		.discount {
+			color: var(--secondary-text-color);
+			font-size: 1.125rem;
+			font-weight: 600;
+			margin-top: auto;
+			span {
+				color: var(--main-accent-color);
+				font-weight: 700;
+			}
+		}
+	}
+}

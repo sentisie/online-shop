@@ -1,0 +1,111 @@
+@import "../../styles/media";
+
+.product {
+	display: flex;
+	padding: 1.5625rem;
+	gap: 1.25rem;
+	min-height: 30rem;
+	.images {
+		display: flex;
+		gap: 0.9375rem;
+		
+		.current {
+			width: 25rem;
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			border-radius: 1rem;
+			transition: 0.2s ease-in-out;
+		}
+
+		.images-list {
+			.image {
+				cursor: pointer;
+				width: 6.25rem;
+				height: 6.25rem;
+				border-radius: 1rem;
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-size: cover;
+
+				&:not(:last-child) {
+					margin-bottom: 0.9375rem;
+				}
+			}
+		}
+	}
+
+	.info {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+
+		& > *:not(:last-child) {
+			margin-bottom: 0.75rem;
+		}
+
+		.name {
+			opacity: 0.5;
+		}
+
+		.sizes {
+			display: flex;
+			gap: 0.625rem;
+
+			.list {
+				display: flex;
+				gap: 0.625rem;
+
+				.size {
+					background-color: var(--main-bg-color);
+					text-align: center;
+					padding: 0.3125rem 0.9375rem;
+					border-radius: 1rem;
+					cursor: pointer;
+
+					&.active {
+						background-color: var(--main-accent-color);
+					}
+				}
+			}
+		}
+
+		.description {
+			font-size: 0.875rem;
+			opacity: 0.8;
+		}
+
+		.actions {
+			button:not(:last-child) {
+				margin-right: 0.625rem;
+			}
+
+			.favourite {
+				background-color: rgb(104, 102, 102);
+				@include hover {
+					background-color: #fff;
+					color: rgb(104, 102, 102);
+				}
+			}
+		}
+
+		.bottom {
+			font-size: 0.875rem;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-top: auto;
+
+			.purchase {
+				opacity: 0.5;
+			}
+
+			a {
+				transition: 0.1s ease-in-out;
+				@include hover {
+					opacity: 0.8;
+				}
+			}
+		}
+	}
+}

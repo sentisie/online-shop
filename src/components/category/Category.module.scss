@@ -1,0 +1,32 @@
+.wrapper {
+	padding: 1.5625rem 1.25rem;
+	.title {
+		text-align: center;
+		margin-bottom: 15px;
+	}
+
+	.filters {
+		display: flex;
+		column-gap: 0.9375rem;
+		margin-bottom: 0.9375rem;
+		.filter {
+			position: relative;
+			span {
+				cursor: default;
+				opacity: 0.6;
+				top: 20%;
+				right: 8%;
+				position: absolute;
+				user-select: none;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+			}
+		}
+	}
+}
+.back {
+	display: flex;
+	align-items: center;
+	gap: 1.25rem;
+}

@@ -1,0 +1,26 @@
+@import "../../styles/media";
+
+.myBtn {
+	padding: 8px 15px;
+	border-radius: 8px;
+	background-color: var(--main-accent-color);
+	color: #fff;
+	font-weight: 700;
+	border: none;
+	cursor: pointer;
+	transition: 0.2s ease-in-out;
+	&:disabled {
+		cursor: not-allowed;
+		background-color: rgb(113, 110, 110);
+		opacity: 0.6;
+		&:hover,
+		&:active {
+			background-color: rgb(113, 110, 110);
+			color: #fff;
+		}
+	}
+	@include hover {
+		background-color: #fff;
+		color: var(--main-accent-color);
+	}
+}

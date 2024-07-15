@@ -1,0 +1,120 @@
+@import "../../styles/mixins", "../../styles/media";
+
+.cart {
+	display: flex;
+	flex-direction: column;
+	gap: 1.25rem;
+	.title {
+		text-align: center;
+		font-size: 1.875rem;
+	}
+
+	.empty {
+		text-align: center;
+		font-size: 1.125rem;
+	}
+
+	.list {
+		.item {
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			background-color: var(--main-bg-color);
+			padding: 0.9375rem 1.5625rem;
+			border-radius: 16px;
+			&:not(:last-child) {
+				margin-bottom: 0.9375rem;
+			}
+			.image {
+				width: 6.25rem;
+				height: 6.25rem;
+				border-radius: 16px;
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+			.info {
+				max-width: 13.75rem;
+				width: 100%;
+				.name {
+					font-size: 0.875rem;
+				}
+				.category {
+					font-size: 0.75rem;
+				}
+			}
+			.price {
+				font-weight: 700;
+				max-width: 5rem;
+				width: 100%;
+			}
+			.quantity {
+				display: flex;
+				align-items: center;
+				column-gap: 1.5625rem;
+				user-select: none;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				.minus,
+				.plus {
+					font-size: 36px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 1.25rem;
+					height: 1.25rem;
+					padding: 15px;
+					border-radius: 5px;
+					background-color: rgb(103, 100, 100);
+					cursor: pointer;
+					transition: 0.2s ease-in-out;
+					@include hover {
+						background-color: #fff;
+						color: rgb(103, 100, 100);
+					}
+					&:disabled {
+						cursor: not-allowed;
+						background-color: rgb(113, 110, 110);
+						opacity: 0.6;
+						&:hover,
+						&:active {
+							background-color: rgb(113, 110, 110);
+							color: #fff;
+						}
+					}
+				}
+				.quan {
+					font-size: 0.875rem;
+					font-weight: 700;
+				}
+			}
+			.total {
+				font-size: 1.125rem;
+				font-weight: 700;
+			}
+			.remove {
+				font-size: 1.125rem;
+				cursor: pointer;
+				transition: 0.2s ease-in-out;
+				@include hover {
+					opacity: 0.5;
+				}
+			}
+		}
+	}
+	.actions {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: auto;
+		.total {
+			font-size: 1.125rem;
+			font-weight: 600;
+			span {
+				font-weight: 700;
+			}
+		}
+	}
+}

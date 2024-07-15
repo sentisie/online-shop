@@ -1,0 +1,78 @@
+body {
+	font-family: "Montserrat", Arial, Helvetica, sans-serif;
+	color: var(--main-text-color);
+	background-color: var(--main-bg-color);
+}
+
+a,
+button,
+input,
+textarea,
+svg * {
+	transition-duration: var(--transition-duration);
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	// font-weight: 500;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+main {
+	flex: 1;
+	margin-bottom: 1.25rem;
+}
+
+.visible {
+	visibility: visible;
+	opacity: 1;
+	transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.hidden {
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type="number"] {
+	-moz-appearance: textfield;
+}
+
+// h1,
+// .h1 {
+// 	@include fluid-text(60, 43);
+// }
+
+// h2,
+// .h2 {
+// 	@include fluid-text(40, 36);
+// }
+
+// h3,
+// .h3 {
+// 	@include fluid-text(30, 26);
+// }
+
+// h4,
+// .h4 {
+// 	@include fluid-text(20, 18);
+// }

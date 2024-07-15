@@ -1,0 +1,87 @@
+@import "../../../styles/mixins", "../../../styles/media";
+
+.overlay {
+	transition: 0.2s;
+	background-color: #0000007a;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	z-index: 8;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	.modal {
+		max-width: 360px;
+		position: relative;
+		z-index: 9;
+		.close {
+			background-color: transparent;
+			border: none;
+			width: 1.875rem;
+			height: 1.875rem;
+			position: absolute;
+			top: 5%;
+			right: 8%;
+			cursor: pointer;
+			transition: 0.2s ease-in-out;
+			@include hover {
+				opacity: 0.5;
+			}
+			&::before,
+			&::after {
+				content: "";
+				background-color: #fff;
+				width: 18px;
+				height: 2px;
+				@include abs-center;
+			}
+			&::before {
+				transform: rotate(50deg);
+			}
+			&::after {
+				transform: rotate(130deg);
+			}
+		}
+	}
+}
+
+.modal {
+	background-color: rgba(28, 28, 30, 0.998);
+	width: 100%;
+	padding: 2.1875rem 1.5625rem;
+	text-align: center;
+
+	.title {
+		margin-bottom: 0.9375rem;
+	}
+	.form {
+		& > *:not(:last-child) {
+			margin-bottom: 0.9375rem;
+		}
+		.group {
+			&:not(:last-child) {
+				border-radius: 0.625rem;
+				overflow: hidden;
+			}
+		}
+		.link {
+			cursor: pointer;
+			opacity: 0.6;
+			transition: 0.2s ease-in-out;
+			@include hover {
+				opacity: 1;
+			}
+		}
+		.submit {
+			width: 100%;
+		}
+		.logout {
+			width: 100%;
+			background-color: rgb(111, 65, 111);
+			@include hover {
+				background-color: var(--main-accent-color);
+				color: #fff;
+			}
+		}
+	}
+}

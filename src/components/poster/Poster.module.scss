@@ -1,0 +1,55 @@
+@import "../../styles/media";
+
+.home {
+	width: 100%;
+	padding: 1.5625rem 2.1875rem;
+	min-height: 30rem;
+	position: relative;
+	background: var(--secondary-bg-color);
+	border-radius: 16px;
+	.title {
+		font-size: 7.2rem;
+		font-weight: 800;
+		color: rgba(45, 46, 48, 0.603);
+		filter: blur(1px);
+		@include tablet {
+			font-size: 3.4rem;
+		}
+	}
+	.product {
+		display: flex;
+		justify-content: space-between;
+		.text {
+			width: 100%;
+			.subtitle {
+				text-transform: uppercase;
+				margin-bottom: 0.625rem;
+				opacity: 0.4;
+			}
+			.head {
+				line-height: 120%;
+				font-size: 2.8125rem;
+				text-transform: uppercase;
+				margin-bottom: 0.9375rem;
+			}
+			.btn {
+				padding: 8px 15px;
+				border-radius: 8px;
+				background-color: var(--main-accent-color);
+				color: #fff;
+				font-weight: 700;
+				border: none;
+			}
+		}
+		.image {
+			position: absolute;
+			top: 0;
+			right: 0;
+			img {
+				max-width: 33rem;
+				width: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+}

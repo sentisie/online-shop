@@ -1,0 +1,9 @@
+.myWrapper {
+	background-color: var(--secondary-bg-color);
+	border-radius: 16px;
+	padding: 0.9375rem 1.25rem;
+	width: 100%;
+	&:not(:last-child) {
+		margin-bottom: 0.9375rem;
+	}
+}
