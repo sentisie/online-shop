@@ -23,7 +23,12 @@ const CategoryIdPage: FC = () => {
 
 	const [params, setParams] = useState(defaultParams);
 
-	const { data = [], isLoading, isSuccess, error } = useGetProductsQuery(params); // Значение по умолчанию для data
+	const {
+		data = [],
+		isLoading,
+		isSuccess,
+		error,
+	} = useGetProductsQuery(params); // Значение по умолчанию для data
 
 	const [items, setItems] = useState<IProduct[]>([]);
 
@@ -54,6 +59,7 @@ const CategoryIdPage: FC = () => {
 				style={{
 					display: "flex",
 					flexDirection: "column",
+					width: "100%",
 				}}
 			>
 				<Poster />
