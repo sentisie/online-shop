@@ -29,8 +29,8 @@ const App: FC = () => {
 						</div>
 					</div>
 				</main>
-				https://drive.google.com/file/d/1MBBTBAUkOHRjDyxvgN7Qqxn9jGsIa93W/view?usp=sharing - санька <br/>
-				https://drive.google.com/file/d/1J_1yq3UGPcMXb3xcWPOuxU1hoPQkAcgl/view?usp=sharing - вика <br/>
+				<a href="https://drive.google.com/file/d/1MBBTBAUkOHRjDyxvgN7Qqxn9jGsIa93W/view?usp=sharing">санька</a><br/>
+				<a href="https://drive.google.com/file/d/1J_1yq3UGPcMXb3xcWPOuxU1hoPQkAcgl/view?usp=sharing">вика</a><br/>
 				<Footer />
 				<User />
 			</div>
